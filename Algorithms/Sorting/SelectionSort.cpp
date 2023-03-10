@@ -1,6 +1,6 @@
 /*
 
-1) Use Case: When (array/vector/list) size is small.
+1) Use Case: When (array/vector/list) size/length is small.
 
 2) Space Complexity: O(1)
 
