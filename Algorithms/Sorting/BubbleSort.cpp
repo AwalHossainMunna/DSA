@@ -5,8 +5,7 @@
 
 3) Time Complexity: O(n) 
 
-* Best case -> O(1) 
-* Average case -> O(n)
+* Best case -> O(n) 
 * Worst case -> O(n²) 
 */
 
