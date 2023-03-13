@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int sqroot(int a){
+int squareRoot(int a){
     int s = 0, e = a;
     int mid = s+(e-s)/2;
     int ans=-1;
@@ -29,6 +29,6 @@ int main()
 {
     int num;
     cin>>num;
-    cout<<sqroot(num);
+    cout<<squareRoot(num);
     return 0;
 }
