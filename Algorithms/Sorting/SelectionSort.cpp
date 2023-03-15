@@ -10,6 +10,7 @@
 * Worst case -> O(n²) 
 
 */
+
 #include <iostream>
 using namespace std;
 
@@ -27,8 +28,11 @@ void selectionSort(int arr[], int n)
                 minIndex = j;
             }
         }
+
         int temp = arr[i];
+
         arr[i] = arr[minIndex];
+
         arr[minIndex] = temp;
     }
 }
@@ -40,6 +44,7 @@ void printArray(int arr[], int size)
         cout << arr[i] << " ";
     }
 }
+
 
 int main()
 {
