@@ -10,8 +10,7 @@ void cycleSort(int arr[], int n)
     {
         int correct = arr[i] - 1;
         
-        if (arr[i] != arr[correct])
-        {
+        if (arr[i] != arr[correct]){
             int temp = arr[i];
             arr[i] = arr[correct];
             arr[correct] = temp;
