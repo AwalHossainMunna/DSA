@@ -3,7 +3,6 @@ using namespace std;
 
 void moveZeros(int arr[], int n)
 {
-
     int i = 0;
 
     for (int j=0; j<n; j++)
@@ -18,6 +17,7 @@ void moveZeros(int arr[], int n)
     }
 }
 
+
 void print(int arr[], int n)
 {
 
@@ -26,7 +26,6 @@ void print(int arr[], int n)
         cout << arr[i] << " ";
     }
 }
-
 
 
 int main()
