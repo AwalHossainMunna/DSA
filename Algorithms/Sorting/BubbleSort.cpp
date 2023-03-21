@@ -9,43 +9,50 @@
 * Worst case -> O(n²) 
 */
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void bubbleSort(int a[],int n){
+void bubbleSort(int a[], int n)
+{
 
     int temp;
-    int flag=0;
-    
-    for(int i=1; i<n; i++){
-        for(int j=0; j<n-i; j++){
-            if(a[j]>a[j+1]){
-                temp=a[j];
-                a[j]=a[j+1];
-                a[j+1]=temp;
-                flag=1;
+    int flag = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = 0; j < n - i; j++)
+        {
+            if (a[j] > a[j + 1])
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+                flag = 1;
             }
         }
-            if(flag==0){
+        if (flag == 0)
+        {
             break;
-            }  
+        }
     }
-    
-    for(int i=0; i<n; i++){
-        cout<<a[i]<<" ";
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
     }
 }
 
 int main()
 {
     int size;
-    cin>>size;
+    cin >> size;
     int arr[size];
 
-    for(int i=0; i<size; i++){
-        cin>>arr[i];
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
     }
-    bubbleSort(arr,size);
+    bubbleSort(arr, size);
 
     return 0;
 }
