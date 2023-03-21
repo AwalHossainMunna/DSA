@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int firstOcc(int a[], int n, int key)
+int firstOccurence(int a[], int n, int key)
 {
     int s = 0, e = n - 1;
     int mid = s + (e - s) / 2;
@@ -28,7 +28,7 @@ int firstOcc(int a[], int n, int key)
 }
 
 
-int lastOcc(int a[], int n, int key)
+int lastOccurence(int a[], int n, int key)
 {
     int s = 0, e = n - 1;
     int mid = s + (e - s) / 2;
@@ -68,8 +68,8 @@ int main()
     }
     cin >> key;
 
-    int first = firstOcc(arr, size, key);
-    int last = lastOcc(arr, size, key);
+    int first = firstOccurence(arr, size, key);
+    int last = lastOccurence(arr, size, key);
     cout << "First occurrance of " << key << " is at index " << first << endl;
     cout << "Last occurrance of " << key << " is at index " << last << endl;
 }
