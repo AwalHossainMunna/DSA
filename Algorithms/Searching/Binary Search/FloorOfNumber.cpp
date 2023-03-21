@@ -37,7 +37,7 @@ int main()
     {
         cin>>arr[i];
     }
-
+    
     int key;
     cin>>key;
     int Index = floor(arr,size, key);
