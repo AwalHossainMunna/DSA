@@ -6,6 +6,7 @@ int firstOcc(int a[], int n, int key)
     int s = 0, e = n - 1;
     int mid = s + (e - s) / 2;
     int ans = -1;
+    
     while (s <= e)
     {
         if (a[mid] == key)
@@ -32,6 +33,7 @@ int lastOcc(int a[], int n, int key)
     int s = 0, e = n - 1;
     int mid = s + (e - s) / 2;
     int ans = -1;
+    
     while (s <= e)
     {
         if (a[mid] == key)
