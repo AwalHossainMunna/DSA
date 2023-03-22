@@ -10,7 +10,7 @@ void rotateArray(int arr[], int n, int k)
         temp[(i + k) % n] = arr[i];
     }
 
-    // copy temp into arr array;
+    // copy temp array elements into arr array;
     for (int i = 0; i < n; i++)
     {
         arr[i] = temp[i];
