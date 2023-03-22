@@ -1,3 +1,7 @@
+/*
+Question: https://practice.geeksforgeeks.org/problems/square-root/1
+*/
+
 #include <iostream>
 using namespace std;
 
