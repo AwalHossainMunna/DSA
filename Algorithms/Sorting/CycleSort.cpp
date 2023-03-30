@@ -7,7 +7,6 @@ using namespace std;
 
 void cycleSort(int arr[], int n)
 {
-
     int i=0;
 
     while (i < n)
@@ -25,6 +24,7 @@ void cycleSort(int arr[], int n)
         }
     }
 }
+
 
 void printArray(int arr[], int n)
 {
