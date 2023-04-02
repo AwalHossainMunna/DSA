@@ -1,30 +1,30 @@
-//Question: https://leetcode.com/problems/rotate-array/
+/*
+Question: https://leetcode.com/problems/rotate-array/
+*/
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void rotateArray(int arr[], int n, int k)
+vector<int> rotate(vector<int> arr, int k)
 {
-    int temp[n];
-    
-    for (int i = 0; i < n; i++)
+    vector<int> temp(arr.size());
+
+    for (int i = 0; i < arr.size(); i++)
     {
-        temp[(i + k) % n] = arr[i];
+        temp[(i + k) % arr.size()] = arr[i];
     }
 
-    // copy temp array elements into arr array;
-    for (int i = 0; i < n; i++)
-    {
-        arr[i] = temp[i];
-    }
+    arr = temp; // Copying temp array elements in arr array (Time-Complexity On )
+
+    return arr;
 }
 
-
-void print(int arr[], int n)
+void print(vector<int> ans)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < ans.size(); i++)
     {
-        cout << arr[i] << " ";
+        cout << ans[i] << " ";
     }
 }
 
@@ -33,15 +33,19 @@ int main()
 {
     int size, k;
     cin >> size;
-    int arr[size];
+    vector<int> arr;
 
     for (int i = 0; i < size; i++)
     {
-        cin >> arr[i];
+        int x;
+        cin >> x;
+        arr.push_back(x);
     }
+    
     cin >> k;
-    rotateArray(arr, size, k);
-    print(arr, size);
+    vector<int> ans = rotate(arr, k);
+    print(ans);
 
     return 0;
 }
+
