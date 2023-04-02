@@ -3,9 +3,12 @@
 
 1) Use Case: When (array/vector/list) size/length is Larger.
 
-2) Space Complexity: O(1)
+2) Why Bubble Sort?
+- With the first pass through the array the largest element came to the end.
 
-3) Time Complexity: O(n) 
+3) Space Complexity: O(1)
+
+4) Time Complexity: O(n) 
 
 * Best case -> O(n) 
 * Worst case -> O(n²) 
