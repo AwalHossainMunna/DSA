@@ -15,7 +15,7 @@ vector<int> rotate(vector<int> arr, int k)
         temp[(i + k) % arr.size()] = arr[i];
     }
 
-    arr = temp; // Copying temp array elements in arr array (Time-Complexity On )
+    arr = temp; // Copying temp array elements in arr array.  Time-Complexity O(n)
 
     return arr;
 }
