@@ -11,21 +11,21 @@
 #include <iostream>
 using namespace std;
 
-void triangle(int r, int c)
+void triangle(int row, int col)
 {
-    if (r == 0)
+    if (row == 0)
     {
         return;
     }
-    if (c < r)
+    if (col <= row)
     {
         cout << "*";
-        triangle(r, c + 1);
+        triangle(row, col + 1);
     }
     else
     {
         cout << endl;
-        triangle(r - 1, 0);
+        triangle(row - 1, 1); 
     }
 }
 
@@ -33,7 +33,7 @@ int main()
 {
     int N;
     cin >> N;
-    triangle(N, 0);
+    triangle(N, 1);
 
     return 0;
 }
