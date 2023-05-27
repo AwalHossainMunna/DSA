@@ -1,0 +1,12 @@
+Let's initialise two variables, pointer1 and pointer2, and consider them as our two pointers.
+
+Set pointer1 to 0 index and pointer2 to len(A)-1
+These correspond to the smallest and greatest integers, respectively, because the array is sorted.
+Compute the sum of the two numbers pointed to at each step.
+If the sum is greater than the target, we need to reduce the estimate by moving the right pointer, i.e. pointer2, to the left.
+On the other hand, if the sum is less than the target, we need to increase the estimate by moving the left pointer, i.e. pointer1, to the right. 
+And how will it benefit?  The array is sorted, so as the index increases, the value on that index will also increase. Thus, this brings the estimate closer to the target value.
+We can break and return the answer if a solution is found. If there is no answer, the left and right pointers will finally point to the same number, indicating that all possibilities have been exhausted. 
+
+The fact that the list was sorted is why we are confident that we've explored all of the possibilities in linear runtime O(N).
+
