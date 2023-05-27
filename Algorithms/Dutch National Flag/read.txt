@@ -1,1 +1,8 @@
+ALGORITHM -
+* Take three-pointers, namely - low, mid, high.
+* We use low and mid pointers at the start, and the high pointer will point at the end of the given array.
 
+CASES :
+* If array [mid] =0, then swap array [mid] with array [low] and increment both pointers once.
+* If array [mid] = 1, then no swapping is required. Increment mid pointer once.
+* If array [mid] = 2, then we swap array [mid] with array [high] and decrement the high pointer once.
