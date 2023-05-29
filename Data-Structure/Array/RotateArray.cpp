@@ -2,8 +2,7 @@
 Question: https://leetcode.com/problems/rotate-array/
 */
 
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 vector<int> rotate(vector<int> arr, int k)
