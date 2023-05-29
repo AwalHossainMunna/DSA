@@ -13,7 +13,7 @@
 4) Stable & Adeptable Algorithm.
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 void insertionSort(int arr[], int n)
