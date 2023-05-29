@@ -13,7 +13,7 @@
 * Worst case -> O(n²) 
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 void bubbleSort(int a[], int n)
