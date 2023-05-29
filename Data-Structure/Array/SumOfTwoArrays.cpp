@@ -2,8 +2,7 @@
 Question:  https://www.codingninjas.com/codestudio/problems/sum-of-two-arrays_893186
 */
 
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 void print(vector<int> arr2)
