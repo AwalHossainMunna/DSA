@@ -8,7 +8,7 @@
 
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 void triangle(int row, int col)
