@@ -2,7 +2,7 @@
 Question: https://www.geeksforgeeks.org/cycle-sort/
 */
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 void cycleSort(int arr[], int n)
