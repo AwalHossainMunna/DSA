@@ -1,0 +1,10 @@
+Here’s a step-by-step explanation of the cycle sort algorithm:
+
+* Start with an unsorted array of n elements.
+* Initialize a variable, cycleStart, to 0.
+* For each element in the array, compare it with every other element to its right. If there are any elements that are smaller than the current element, increment cycleStart.
+* If cycleStart is still 0 after comparing the first element with all other elements, move to the next element and repeat step 3.
+* Once a smaller element is found, swap the current element with the first element in its cycle. The cycle is then continued until the current element returns to its original position.
+* Repeat steps 3-5 until all cycles have been completed.
+
+The array is now sorted.
