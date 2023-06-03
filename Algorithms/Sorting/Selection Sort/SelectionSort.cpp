@@ -11,18 +11,19 @@
 
 */
 
+
 #include <bits/stdc++.h>
 using namespace std;
 
-void selectionSort(int arr[], int n)
+void selectionSort(vector<int> &arr)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < arr.size()-1; i++)
     {
         int minIndex = i;
 
-        for (int j = i + 1; j < n; j++)
+        for (int j = i + 1; j < arr.size(); j++)
         {
-            if (arr[minIndex] < arr[j])
+            if (arr[minIndex] > arr[j])
             {
                 minIndex = j;
             }
@@ -36,9 +37,10 @@ void selectionSort(int arr[], int n)
     }
 }
 
-void printArray(int arr[], int size)
+
+void printArray(vector<int> &arr)
 {
-    for (int i = 0; i < size; i++)
+    for (int i=0; i<arr.size(); i++)
     {
         cout << arr[i] << " ";
     }
@@ -48,16 +50,17 @@ void printArray(int arr[], int size)
 int main()
 {
     int size;
-    cin >> size;
-    int arr[size];
+    cin>>size;
+    vector<int> arr;
 
-    for (int i = 0; i < size; i++)
-    {
-        cin >> arr[i];
+    for(int i=0; i<size; i++){
+        int x;
+        cin>>x;
+        arr.push_back(x);
     }
 
-    selectionSort(arr, size);
-    printArray(arr, size);
+    selectionSort(arr);
+    printArray(arr);
 
     return 0;
 }
