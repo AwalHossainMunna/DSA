@@ -5,11 +5,11 @@ Question: https://www.geeksforgeeks.org/cycle-sort/
 #include <bits/stdc++.h>
 using namespace std;
 
-void cycleSort(int arr[], int n)
+void cycleSort(vector<int> &arr)
 {
     int i=0;
 
-    while (i < n)
+    while (i < arr.size())
     {
         int correct = arr[i] - 1;
         
@@ -25,9 +25,9 @@ void cycleSort(int arr[], int n)
     }
 }
 
-void printArray(int arr[], int n)
+void printArray(vector<int> &arr)
 {
-    for (int i=0; i<n; i++)
+    for (int i=0; i<arr.size(); i++)
     {
         cout << arr[i] << " ";
     }
@@ -37,16 +37,17 @@ void printArray(int arr[], int n)
 int main()
 {
     int size;
-    cin >> size;
-    int arr[size];
+    cin>>size;
+    vector<int> arr;
 
-    for (int i= ; i<size; i++)
-    {
-        cin >> arr[i];
+    for(int i=0; i<size; i++){
+        int x;
+        cin>>x;
+        arr.push_back(x);
     }
 
-    cycleSort(arr, size);
-    printArray(arr, size);
+    cycleSort(arr);
+    printArray(arr);
 
     return 0;
 }
