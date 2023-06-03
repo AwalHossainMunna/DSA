@@ -12,14 +12,15 @@
 4) Stable & Adeptable Algorithm.
 */
 
+
 #include <bits/stdc++.h>
 using namespace std;
 
-void insertionSort(int arr[], int n)
+void insertionSort(vector<int> &arr)
 {
     int i = 1;
     
-    while (i < n)
+    while (i < arr.size())
     {
         int temp = arr[i];
         
@@ -45,28 +46,29 @@ void insertionSort(int arr[], int n)
     }
 }
 
-void print(int arr[], int n)
+void printArray(vector<int> &arr)
 {
-    for (int i = 0; i < n; i++)
+    for (int i=0; i<arr.size(); i++)
     {
         cout << arr[i] << " ";
     }
 }
 
+
 int main()
 {
     int size;
-    cin >> size;
+    cin>>size;
+    vector<int> arr;
 
-    int arr[size];
-
-    for (int i = 0; i < size; i++)
-    {
-        cin >> arr[i];
+    for(int i=0; i<size; i++){
+        int x;
+        cin>>x;
+        arr.push_back(x);
     }
 
-    insertionSort(arr, size);
-    print(arr, size);
-    
+    insertionSort(arr);
+    printArray(arr);
+
     return 0;
 }
