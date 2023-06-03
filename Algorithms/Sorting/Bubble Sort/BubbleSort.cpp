@@ -13,13 +13,13 @@
 * Worst case -> O(n²) 
 */
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-void bubbleSort(int a[], int n)
-{
-    int temp;
-    int flag = 0;
+void bubbleSort(vector<int> &a){
+
+    int temp,flag=0;
+    int n=a.size();
 
     for (int i = 1; i < n; i++)
     {
@@ -40,27 +40,31 @@ void bubbleSort(int a[], int n)
     } 
 }
 
-void print(int arr[], int n)
+void print(vector<int> &a)
 {
+    int n=a.size();
+
     for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << " ";
+        cout << a[i] << " ";
     }   
 }
 
 
 int main()
 {
-    int size;
-    cin >> size;
-    int arr[size];
+    int size,val;
+    cin>>size;
+    vector<int> arr;
 
-    for (int i = 0; i < size; i++)
-    {
-        cin >> arr[i];
+    for(int i=0; i<size; i++){
+        int x;
+        cin>>x;
+        arr.push_back(x);
     }
-    bubbleSort(arr, size);
-    print(arr,size);
+
+    bubbleSort(arr);
+    print(arr);
 
     return 0;
 }
