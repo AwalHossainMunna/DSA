@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void bToD(int n){
+void dToB(int n){
 
     vector<int> v;
 
@@ -22,7 +22,7 @@ int main()
     int N;
     cin>>N;
 
-    bToD(N);
+    dToB(N);
 
     return 0;
 }
