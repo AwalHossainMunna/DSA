@@ -13,6 +13,7 @@ using namespace std;
 
 void triangle(int row, int col)
 {
+    // Base call
     if (row == 0)
     {
         return;
