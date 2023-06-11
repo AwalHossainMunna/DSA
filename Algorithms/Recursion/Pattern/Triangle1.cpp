@@ -13,17 +13,19 @@ using namespace std;
 
 void triangle(int row, int col)
 {
-    //Base call
+    // Base call
     if (row == 0)
     {
         return;
     }
+    // print stars on columns
     if (col <= row)
     {
         //cout << "*";
         triangle(row, col + 1);
         cout << "*";
     }
+    // subtract row by 1 & print new line
     else
     {
         //cout << endl;
