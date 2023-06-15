@@ -11,8 +11,8 @@ int sumDigit(int n){
     int digit=n%10;
 
     return digit+sumDigit(n/10);
-
 }
+
 
 using namespace std;
 int main()
