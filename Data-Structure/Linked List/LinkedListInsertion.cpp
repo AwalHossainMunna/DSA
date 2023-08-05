@@ -14,7 +14,7 @@ class Node{
 };
 
 
-// Function to insert at the beginning
+// Function to insert at beginning
 void insertAtBeginning(Node* &head, int d){
     //new node create 
     Node* temp = new Node(d);
@@ -23,7 +23,7 @@ void insertAtBeginning(Node* &head, int d){
 }
 
 
-// Function to insert at End
+
 void insertAtEnd(Node* &tail, int d){
 
     //new node create 
@@ -31,6 +31,38 @@ void insertAtEnd(Node* &tail, int d){
     tail->next = temp;
     tail = temp;
 }
+
+
+void insertAtPosition(Node* &head, Node* &tail, int position, int d){
+    
+    // insert at first position
+    if(position == 1){
+        insertAtBeginning(head,d);
+        return;
+    }
+
+    Node* temp = head;
+    int i=1;
+
+    while(i<position-1){
+        temp = temp->next;
+        i++;
+    }
+
+    // insert at last position
+    if(temp->next == NULL){
+        insertAtEnd(tail,d);
+        return;
+    }
+
+    // Create new node
+    Node* newNode = new Node(d);
+
+    newNode->next = temp->next;
+    temp->next = newNode;
+
+}
+
 
 
 void print(Node* head){
@@ -52,6 +84,7 @@ int main()
 
     insertAtBeginning(head,12);
     insertAtEnd(tail,16);
+    insertAtPosition(head,tail,4,22);
 
     print(head);
 
