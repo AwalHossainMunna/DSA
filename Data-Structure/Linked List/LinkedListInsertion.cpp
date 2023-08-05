@@ -15,11 +15,11 @@ class Node{
 
 
 // Function to insert at beginning
-void insertAtBeginning(Node* head, int d){
-    
+void insertAtBeginning(Node* &head, int d){
+    //new node create 
     Node* temp = new Node(d);
-    head->next = temp;
-    temp->next = NULL;
+    temp->next = head;
+    head = temp;
 }
 
 
