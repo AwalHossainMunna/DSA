@@ -13,6 +13,7 @@ class Node{
     }
 };
 
+
 // Function to insert at the beginning
 void insertAtBeginning(Node* &head, int d){
     //new node create 
@@ -20,6 +21,7 @@ void insertAtBeginning(Node* &head, int d){
     temp->next = head;
     head = temp;
 }
+
 
 // Function to insert at End
 void insertAtEnd(Node* &tail, int d){
