@@ -64,7 +64,6 @@ void insertAtPosition(Node* &head, Node* &tail, int position, int d){
 }
 
 
-
 void print(Node* head){
     Node* temp;
     temp = head;
@@ -74,7 +73,8 @@ void print(Node* head){
         temp = temp-> next;
     }     
 }
- 
+
+
 int main()
 {
     Node* node1 = new Node(10);
