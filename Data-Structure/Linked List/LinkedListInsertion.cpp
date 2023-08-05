@@ -8,20 +8,19 @@ class Node{
  
     //constructor
     Node(int data){
-        this->data= data;
-        this->next= NULL;
+        data= data;
+        next= NULL;
     }
 };
 
 
 // Function to insert at beginning
-void insertAtBeginning(Node* &head, int d){
-    //new node create 
+void insertAtBeginning(Node* head, int d){
+    
     Node* temp = new Node(d);
-    temp->next = head;
-    head = temp;
+    head->next = temp;
+    temp->next = NULL;
 }
-
 
 
 void insertAtEnd(Node* &tail, int d){
