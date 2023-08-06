@@ -1,2 +1,0 @@
-What is linked list?
--> Linked list is a liner data strusture, collection of nodes.
