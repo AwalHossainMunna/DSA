@@ -31,6 +31,7 @@ void print(Node* head){
     }     
 }
 
+
 void deleteAtHead(Node* &head){
 
     Node* temp = head;
@@ -38,6 +39,19 @@ void deleteAtHead(Node* &head){
     free(temp);
 }
 
+
+void deleteAtEnd(Node* &head){
+
+    Node* secondLast = head;
+    
+    while(secondLast->next->next != NULL){
+        secondLast = secondLast->next;
+    }
+
+    Node* temp = secondLast->next;
+    secondLast->next = NULL;
+    free(temp);
+}
 
 
 int main()
@@ -50,6 +64,7 @@ int main()
     push_back(tail,37);
 
     deleteAtHead(head);
+    deleteAtEnd(head);
     print(head);
 
     return 0;
