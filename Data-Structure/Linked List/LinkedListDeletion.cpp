@@ -54,6 +54,27 @@ void deleteAtEnd(Node* &head){
 }
 
 
+void deleteAtPosition(Node* &head, int pos){
+
+    if(pos == 0){
+        deleteAtHead(head);
+        return;
+    }
+    
+    int curr_pos = 0;
+    Node* prev = head;
+
+    while(curr_pos != pos-1){
+        prev = prev->next;
+        curr_pos++;
+    }
+
+    Node* temp = prev->next;
+    prev->next = prev->next->next;
+    free(temp);
+}
+
+
 int main()
 {
     Node* node1 = new Node(10);
@@ -65,6 +86,7 @@ int main()
 
     deleteAtHead(head);
     deleteAtEnd(head);
+    deleteAtPosition(head,1);
     print(head);
 
     return 0;
