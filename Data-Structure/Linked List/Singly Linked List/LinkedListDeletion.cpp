@@ -12,7 +12,6 @@ class Node{
     }
 };
 
-
 void push_back(Node* &tail, int d){
 
     Node* newNode = new Node(d);
