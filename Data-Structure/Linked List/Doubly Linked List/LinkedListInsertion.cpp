@@ -3,60 +3,69 @@ using namespace std;
 
 class Node{
     public:
+
     int data;
-    Node *next;
- 
+    Node* prev;
+    Node* next;
+
     Node(int val){
         data = val;
+        prev = NULL;
         next = NULL;
     }
 };
 
 
-void push_back(Node* &tail, int d){
+class DoublyLinkedList{
+    public:
 
-    Node* newNode = new Node(d);
-    tail->next = newNode;
-    tail = newNode;
-}
+    Node* head;
+    Node* tail;
 
-
-void print(Node* head){
-    Node* temp;
-    temp = head;
-
-    while(temp!=NULL){
-        cout<<temp->data<<endl;
-        temp = temp-> next;
-    }     
-}
-
-
-void updateAtPosition(Node* &head, int position, int val){
-
-    int curr_pos = 0;
-    Node* temp = head;
-
-    while(curr_pos != position){
-        temp = temp->next;
-        curr_pos++;
+    DoublyLinkedList(){
+        head = NULL;
+        tail = NULL;
     }
-    temp->data = val;
-}
+
+    void insertAtStart(int val){
+
+        Node* newNode = new Node(val);
+        if(head == NULL){
+            head = newNode;
+            tail = newNode;
+            return;
+        }
+
+        newNode->next = head;
+        head->prev = newNode;
+        head = newNode;
+        return;
+    }
+
+
+    void display(){
+
+        Node* temp;
+        cout<<"NULL<->";
+        while(temp != NULL){
+            cout<<temp->data<<"<->";
+            temp = temp->next;
+        }cout<<"NULL";
+    }
+};
+
 
 
 int main()
-{
-    Node* node1 = new Node(10);
-    Node* head = node1;
-    Node* tail = node1;
-    
-    push_back(tail,45);
-    push_back(tail,37);
-    push_back(tail,33);
+{ 
 
-    updateAtPosition(head,1,3);
-    print(head);
+    DoublyLinkedList dll;
     
+    dll.insertAtStart(1);
+    dll.insertAtStart(2);
+    dll.insertAtStart(3);
+
+    dll.display();
+
     return 0;
 }
