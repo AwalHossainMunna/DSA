@@ -1,91 +1,134 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Node{
-    public:
+class Node
+{
+public:
     int data;
     Node *next;
 
-    Node(int val){
+    Node(int val)
+    {
         data = val;
         next = NULL;
     }
 };
 
+class SinglyLinkedList
+{
+public:
+    Node *head;
+    Node *tail;
 
-// Function to insert at beginning
-void insertAtBeginning(Node* &head, int d){
-    //new node create 
-    Node* newNode = new Node(d);
-    newNode->next = head;
-    head = newNode;
-}
-
-
-// Function to insert at End
-void insertAtEnd(Node* &tail, int d){
-
-    Node* newNode = new Node(d);
-    tail->next = newNode;
-    tail = newNode;
-}
-
-
-// Function to insert at any position
-void insertAtPosition(Node* &head, Node* &tail, int position, int d){
-
-    Node* temp = head;
-    
-    // insert at first position
-    if(position == 1){
-        insertAtBeginning(head,d);
-        return;
+    SinglyLinkedList()
+    {
+        head = NULL;
+        tail = NULL;
     }
+    
+    //Function to insert at Head
+    void insertAtHead(int d)
+    {
 
-    // insert at last position
-    if(temp->next == NULL){
-        insertAtEnd(tail,d);
+        Node *newNode = new Node(d);
+        if (head == NULL)
+        {
+            head = newNode;
+            tail = newNode;
+            return;
+        }
+
+        newNode->next = head;
+        head = newNode;
         return;
     }
     
-    int i=1;
+    //Function to insert at End
+    void insertAtEnd(int d)
+    {
 
-    while(i<position-1){
-        temp = temp->next;
-        i++;
+        Node *newNode = new Node(d);
+        if (tail == NULL)
+        {
+            head = newNode;
+            tail = newNode;
+            return;
+        }
+
+        Node *temp = head;
+        while (temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+
+        temp->next = newNode;
+        tail = newNode;
+        return;
     }
 
-    Node* newNode = new Node(d);
+    // Function to insert at any position
+    void insertAtPosition(int pos, int d)
+    {
 
-    newNode->next = temp->next;
-    temp->next = newNode;
+        Node *temp = head;
 
-}
+        // insert at the first position
+        if (pos == 0)
+        {
+            insertAtHead(d);
+            return;
+        }
 
+        // insert at the last position
+        if (temp->next == NULL)
+        {
+            insertAtEnd(d);
+            return;
+        }
 
-void print(Node* head){
-    Node* temp;
-    temp = head;
+        int i = 1;
 
-    while(temp!=NULL){
-        cout<<temp->data<<endl;
-        temp = temp-> next;
-    }     
-}
+        while (i != pos)
+        {
+            temp = temp->next;
+            i++;
+        }
 
+        Node *newNode = new Node(d);
+
+        newNode->next = temp->next;
+        temp->next = newNode;
+        return;
+    }
+
+    void display()
+    {
+        Node *temp = head;
+        while (temp != NULL)
+        {
+            cout << temp->data << "->";
+            temp = temp->next;
+        }
+        cout << "NULL";
+    }
+};
 
 int main()
 {
-    Node* node1 = new Node(10);
 
-    Node* head = node1;
-    Node* tail = node1;
+    SinglyLinkedList sll;
 
-    insertAtBeginning(head,12);
-    insertAtEnd(tail,16);
-    insertAtPosition(head,tail,2,22);
+    sll.insertAtHead(5);
+    sll.insertAtHead(4);
+    sll.insertAtHead(3);
 
-    print(head);
+    sll.insertAtEnd(6);
+    sll.insertAtEnd(7);
+    sll.insertAtEnd(8);
+
+    sll.insertAtPosition(6, 22);
+
+    sll.display();
 
     return 0;
 }
