@@ -55,6 +55,33 @@ class DoublyLinkedList{
         return;
     }
 
+    
+    void insertAtPosition(int d, int pos)
+    {
+        Node *temp = head;
+        if (pos == 0)
+        {
+            insertAtHead(d);
+            return;
+        }
+
+        int currPos = 1;
+        while (currPos != pos)
+        {
+            temp = temp->next;
+            currPos++;
+        }
+
+        Node *newNode = new Node(d);
+        newNode->next = temp->next;
+        temp->next = newNode;
+
+        newNode->prev = temp;
+        newNode->next->prev = newNode;
+        return;
+    }
+
+
     void display(){
 
         Node* temp = head;
@@ -77,6 +104,8 @@ int main()
     dll.insertAtEnd(6);
     dll.insertAtEnd(7);
     dll.insertAtEnd(8);
+
+    dll.insertAtPosition(15, 0);
 
     dll.display();
     
