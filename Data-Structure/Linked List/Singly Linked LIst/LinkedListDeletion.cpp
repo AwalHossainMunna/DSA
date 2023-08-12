@@ -1,62 +1,61 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Node{
-    public:
+class Node
+{
+public:
     int data;
     Node *next;
- 
-    Node(int val){
+
+    Node(int val)
+    {
         data = val;
         next = NULL;
     }
 };
 
-void push_back(Node* &tail, int d){
+class SinglyLinkedList
+{
+public:
+    Node *head;
+    Node *tail;
 
-    Node* newNode = new Node(d);
-    tail->next = newNode;
-    tail = newNode;
-}
-
-
-void print(Node* head){
-    Node* temp;
-    temp = head;
-
-    while(temp!=NULL){
-        cout<<temp->data<<endl;
-        temp = temp-> next;
-    }     
-}
-
-
-void deleteAtHead(Node* &head){
-
-    Node* temp = head;
-    head = head->next;
-    free(temp);
-}
-
-
-void deleteAtEnd(Node* &head){
-
-    Node* secondLast = head;
+    SinglyLinkedList()
+    {
+        head = NULL;
+        tail = NULL;
+    }
     
-    while(secondLast->next->next != NULL){
-        secondLast = secondLast->next;
+    //Function to delete Node at Head
+    void deleteAtHead()
+    {
+
+        Node *temp = head;
+        head = head->next;
+        free(temp);
     }
 
-    Node* temp = secondLast->next;
-    secondLast->next = NULL;
-    free(temp);
-}
+    //Function to delete Node at End
+    void deleteAtEnd()
+    {
 
+        Node *secondLast = head;
 
-void deleteAtPosition(Node* &head, int pos){
+        while (secondLast->next->next != NULL)
+        {
+            secondLast = secondLast->next;
+        }
+
+        Node *temp = secondLast->next;
+        secondLast->next = NULL;
+        free(temp);
+    }
+
+    //Function to delete Node at any position
+    void deleteAtPosition(int pos){
 
     if(pos == 0){
-        deleteAtHead(head);
+        deleteAtHead();
         return;
     }
     
@@ -71,22 +70,33 @@ void deleteAtPosition(Node* &head, int pos){
     Node* temp = prev->next;
     prev->next = prev->next->next;
     free(temp);
-}
+
+    }  
+
+
+    void display()
+    {
+        Node *temp = head;
+        while (temp != NULL)
+        {
+            cout << temp->data << "->";
+            temp = temp->next;
+        }
+        cout << "NULL";
+    }
+};
+
 
 
 int main()
 {
-    Node* node1 = new Node(10);
-    Node* head = node1;
-    Node* tail = node1;
-    
-    push_back(tail,45);
-    push_back(tail,37);
+    SinglyLinkedList sll;
 
-    deleteAtHead(head);
-    deleteAtEnd(head);
-    deleteAtPosition(head,1);
-    print(head);
+    sll.deleteAtHead();
+    sll.deleteAtEnd();
+    sll.deleteAtPosition(2);
+
+    sll.display();
 
     return 0;
 }
