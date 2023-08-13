@@ -14,9 +14,8 @@ public:
     }
 };
 
-class SinglyLinkedList
-{
-public:
+class SinglyLinkedList{
+    public:
     Node *head;
     Node *tail;
 
