@@ -59,10 +59,10 @@ public:
         return;
     }
     
-    int curr_pos = 0;
+    int curr_pos = 1;
     Node* prev = head;
 
-    while(curr_pos != pos-1){
+    while(curr_pos != pos){
         prev = prev->next;
         curr_pos++;
     }
