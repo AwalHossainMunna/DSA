@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Node
-{
-public:
+class Node{
+    public:
+
     int data;
     Node *next;
 
@@ -14,9 +14,10 @@ public:
     }
 };
 
-class SinglyLinkedList
-{
-public:
+
+class SinglyLinkedList{
+    public:
+
     Node *head;
     Node *tail;
 
