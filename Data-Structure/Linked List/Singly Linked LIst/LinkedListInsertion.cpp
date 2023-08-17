@@ -100,7 +100,7 @@ class SinglyLinkedList{
         return;
     }
 
-
+    // Function to insert before a Node
     void insertBeforeNode(int pos, int d){
 
         Node *temp = head;
@@ -121,7 +121,7 @@ class SinglyLinkedList{
         return;
     }
 
-
+    // Function to insert after a Node
     void insertAfterNode(int pos, int d){
 
         Node *temp = head;
@@ -140,6 +140,7 @@ class SinglyLinkedList{
         return;
     }
 
+    //display function
     void display()
     {
         Node *temp = head;
@@ -152,9 +153,10 @@ class SinglyLinkedList{
     }
 };
 
+
+
 int main()
 {
-
     SinglyLinkedList sll;
 
     sll.insertAtHead(5);
