@@ -27,7 +27,6 @@ class SinglyLinkedList{
     //Function to insert at Head
     void insertAtHead(int d)
     {
-
         Node *newNode = new Node(d);
         if (head == NULL)
         {
@@ -44,7 +43,6 @@ class SinglyLinkedList{
     //Function to insert at End
     void insertAtEnd(int d)
     {
-
         Node *newNode = new Node(d);
         if (tail == NULL)
         {
@@ -68,7 +66,6 @@ class SinglyLinkedList{
     // Function to insert at any position
     void insertAtPosition(int pos, int d)
     {
-
         Node *temp = head;
 
         // insert at the first position
@@ -101,8 +98,8 @@ class SinglyLinkedList{
     }
 
     // Function to insert before a Node
-    void insertBeforeNode(int pos, int d){
-
+    void insertBeforeNode(int pos, int d)
+    {
         Node *temp = head;
         Node* preTemp;
 
@@ -122,8 +119,8 @@ class SinglyLinkedList{
     }
 
     // Function to insert after a Node
-    void insertAfterNode(int pos, int d){
-
+    void insertAfterNode(int pos, int d)
+    {
         Node *temp = head;
 
         int i = 0;
