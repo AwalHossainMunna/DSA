@@ -62,7 +62,6 @@ class SinglyLinkedList{
         return;
     }
 
-
     // Function to insert at any position
     void insertAtPosition(int pos, int d)
     {
