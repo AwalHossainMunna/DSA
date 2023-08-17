@@ -64,6 +64,7 @@ class SinglyLinkedList{
         return;
     }
 
+
     // Function to insert at any position
     void insertAtPosition(int pos, int d)
     {
@@ -99,6 +100,46 @@ class SinglyLinkedList{
         return;
     }
 
+
+    void insertBeforeNode(int pos, int d){
+
+        Node *temp = head;
+        Node* preTemp;
+
+        int i = 0;
+
+        while (i != pos)
+        {
+            preTemp = temp;
+            temp = temp->next;
+            i++;
+        }
+
+        Node* newNode = new Node(d);
+        newNode->next = temp;
+        preTemp->next = newNode;
+        return;
+    }
+
+
+    void insertAfterNode(int pos, int d){
+
+        Node *temp = head;
+
+        int i = 0;
+
+        while (i != pos)
+        {
+            temp = temp->next;
+            i++;
+        }
+
+        Node* newNode = new Node(d);
+        newNode->next = temp->next;
+        temp->next = newNode;
+        return;
+    }
+
     void display()
     {
         Node *temp = head;
@@ -125,6 +166,8 @@ int main()
     sll.insertAtEnd(8);
 
     sll.insertAtPosition(6, 22);
+    sll.insertAfterNode(2,9);
+    sll.insertBeforeNode(1,50);
 
     sll.display();
 
