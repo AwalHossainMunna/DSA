@@ -28,22 +28,7 @@ class DoublyLinkedList{
         tail = NULL;
     }
 
-    void insertAtEnd(int d)
-    {
-
-        Node *newNode = new Node(d);
-        if (tail == NULL)
-        {
-            head = newNode;
-            tail = newNode;
-            return;
-        }
-
-        tail->next = newNode;
-        tail = newNode;
-        return;
-    }
-
+    //Function to delete at Head
     void deleteAtHead()
     {
         Node *temp = head;
@@ -53,6 +38,7 @@ class DoublyLinkedList{
         return;
     }
 
+    //Function to delete at End
     void deleteAtLast()
     {
         Node *secondLast = head;
@@ -66,6 +52,7 @@ class DoublyLinkedList{
         return;
     }
 
+    //Function to delete at any given position
     void deleteAtPosition(int pos)
     {
         if (pos == 0)
@@ -100,6 +87,8 @@ class DoublyLinkedList{
         cout << "NULL";
     }
 };
+
+
 
 int main()
 {
