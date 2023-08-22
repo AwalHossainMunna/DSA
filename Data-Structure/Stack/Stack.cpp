@@ -1,3 +1,13 @@
+
+/* 
+The functions associated with stack are: 
+empty() – Returns whether the stack is empty – Time Complexity : O(1) 
+size() – Returns the size of the stack – Time Complexity : O(1) 
+top() – Returns a reference to the top most element of the stack – Time Complexity : O(1) 
+push(g) – Adds the element ‘g’ at the top of the stack – Time Complexity : O(1) 
+pop() – Deletes the most recent entered element of the stack – Time Complexity : O(1)  */
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -34,7 +44,7 @@ class Stack{
         }
     }
 
-    int peek(){
+    int top(){
         if(top >= 0 && top<size){
             return arr[top];
         }
@@ -63,7 +73,7 @@ int main()
     st.push(15);
     st.push(75);
 
-    cout<<st.peek()<<endl;
+    cout<<st.top()<<endl;
 
     return 0;
 }
