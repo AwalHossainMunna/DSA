@@ -66,7 +66,6 @@ class SinglyLinkedList{
         Node *prev, *curr, *next;
         prev = NULL;
         curr = head;
-        next = curr->next;
 
         while (curr != NULL)
         {
