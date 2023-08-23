@@ -67,6 +67,15 @@ class SinglyLinkedList{
         prev = NULL;
         curr = head;
 
+        if(head == NULL){
+            cout<<"Linked list is empty"<<endl;
+            return;
+        }
+        if(head->next == NULL){
+            cout<<head->data<<"->NULL";
+            return;
+        }
+
         while (curr != NULL)
         {
             next = curr->next;
