@@ -2,10 +2,9 @@
 
         1
     3       5
-  7  11    17 NULL
+  7  11   17  NULL
 
 */
-
 
 
 
@@ -54,7 +53,6 @@ void levelOrderTraversal(Node *root)
     while (!q.empty())
     {
         Node *temp = q.front();
-
         q.pop();
 
         if (temp == NULL)
