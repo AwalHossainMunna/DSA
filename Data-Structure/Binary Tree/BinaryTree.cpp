@@ -1,3 +1,14 @@
+/* 
+
+        1
+    3       5
+  7  11    17 NULL
+
+*/
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -34,10 +45,51 @@ Node* buildTree(Node* root){
 }
 
 
+void levelOrderTraversal(Node *root)
+{
+    queue<Node *> q;
+    q.push(root);
+    q.push(NULL);
+
+    while (!q.empty())
+    {
+        Node *temp = q.front();
+
+        q.pop();
+
+        if (temp == NULL)
+        {
+            // previous level has traversed completely
+            cout << endl;
+            if (!q.empty())
+            {
+                // queue still has some child nodes
+                q.push(NULL);
+            }
+        }
+
+        else
+        {
+            cout << temp->data << " ";
+            if (temp->left)
+            {
+                q.push(temp->left);
+            }
+            if (temp->right)
+            {
+                q.push(temp->right);
+            }
+        }
+    }
+}
+
+
 int main()
 {
     Node* root = NULL;
     root = buildTree(root);
-  
+    // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    levelOrderTraversal(root);
+    
     return 0;
 }
