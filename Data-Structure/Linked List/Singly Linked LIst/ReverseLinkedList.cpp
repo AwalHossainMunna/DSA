@@ -105,7 +105,7 @@ int main()
     sll.insertAtEnd(4);
     sll.insertAtEnd(5);
 
-    sll.display();
+    //sll.display();
     sll.reverseDisplay();
 
     return 0;
