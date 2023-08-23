@@ -3,7 +3,7 @@
 
 #include<bits/stdc++.h>  
 using namespace std;
-
+ 
 void imPerArray(){
     int n,count=0,flag=0;
     cin>>n; 
