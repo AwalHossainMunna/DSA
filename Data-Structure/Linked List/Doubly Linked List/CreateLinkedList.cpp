@@ -22,7 +22,7 @@ class DoublyLinkedList{
     Node* head;
     Node* tail;
 
-    SinglyLinkedList(){
+    DoublyLinkedList(){
         head = NULL;
         tail = NULL;
     }
@@ -30,7 +30,7 @@ class DoublyLinkedList{
     void display()
     {
         Node *temp = head;
-        cout<<"NULL"<<;
+        cout<<"NULL<->";
         while (temp != NULL)
         {
             cout << temp->data << "<->";
