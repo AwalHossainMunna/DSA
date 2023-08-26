@@ -91,6 +91,11 @@ int main()
     cout<<"Post Order Traversal: ";
     postOrderTraversal(root);
     cout<<endl<<endl;
-    
+
+    /*
+    Pre Order Traversal: 1 3 7 11 5 17
+    In Order Traversal: 7 3 11 1 17 5
+    Post Order Traversal: 7 11 3 17 5 1
+    */
     return 0;
 }
