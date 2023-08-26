@@ -1,13 +1,3 @@
-/* 
-
-        1
-    3       5
-  7  11   17  NULL
-
-*/
-
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -33,7 +23,7 @@ Node* buildTree(Node* root){
     cin>>data;
     root = new Node(data);
 
-    if(data == -1){
+    if(data == 0){
         return NULL;
     }
 
@@ -88,7 +78,7 @@ int main()
 {
     Node* root = NULL;
     root = buildTree(root);
-    // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    // 1 3 7 0 0 11 0 0 5 17 0 0 0
     levelOrderTraversal(root);
     
     return 0;
