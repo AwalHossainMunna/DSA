@@ -15,7 +15,7 @@ bool validParentheses(string expression)
         if (ch == '(' || ch == '{' || ch == '['){
             s.push(ch);
         }
-        // if ch is a closing bracket first check is stack empty? if not then check is stack top equal to ch? if yes, then pop from stack.
+        // if ch is a closing bracket first check is stack empty? if not then check stack top element is equal to ch? if yes, then pop from stack.
         else{
             if (!s.empty()){
                 if (ch == ')' && s.top() == '(' || ch == '}' && s.top() == '{' || ch == ']' && s.top() == '['){
