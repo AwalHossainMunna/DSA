@@ -11,11 +11,11 @@ bool validParentheses(string expression)
     for (int i = 0; i <expression.length(); i++)
     {
         char ch = expression[i];
-        // if ch is opening bracket push in the stack
+        // if ch is an opening bracket push in the stack
         if (ch == '(' || ch == '{' || ch == '['){
             s.push(ch);
         }
-        // if ch is closing bracket first check is stack empty? if not then check is stack top equal to ch? if yes, then pop from stack.
+        // if ch is a closing bracket first check is stack empty? if not then check is stack top equal to ch? if yes, then pop from stack.
         else{
             if (!s.empty()){
                 if (ch == ')' && s.top() == '(' || ch == '}' && s.top() == '{' || ch == ']' && s.top() == '['){
