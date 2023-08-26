@@ -26,7 +26,7 @@ class Node{
 };
 
 
-Node* buildTree(Node* root){
+Node* createTree(Node* root){
 
     cout<<"Enter the data"<<endl;
     int data;
@@ -38,9 +38,9 @@ Node* buildTree(Node* root){
     }
 
     cout<<"Enter data for inserting in left of "<<data<<endl;
-    root->left = buildTree(root->left);
+    root->left = createTree(root->left);
     cout<<"Enter data for inserting in right of "<<data<<endl;
-    root->right = buildTree(root->right);
+    root->right = createTree(root->right);
     cout<<endl;
     return root;
 }
@@ -87,7 +87,7 @@ void levelOrderTraversal(Node *root)
 int main()
 {
     Node* root = NULL;
-    root = buildTree(root);
+    root = createTree(root);
     // 1 3 7 0 0 11 0 0 5 17 0 0 0
     levelOrderTraversal(root);
     
