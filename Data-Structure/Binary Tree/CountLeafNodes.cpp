@@ -63,6 +63,7 @@ int main()
 {
     Node *root = NULL;
     root = createTree(root);
+    // 1 3 7 0 0 11 0 0 5 17 0 0 0
     int count = 0;
     
     cout<<endl;
