@@ -1,5 +1,4 @@
 
-
 /* Question: https://www.codingninjas.com/studio/problems/valid-parenthesis_795104  */
 
 
@@ -41,6 +40,7 @@ bool validParentheses(string expression)
 int main()
 {
     string st;
+    cout<<"Enter expression: "<<endl;
     getline(cin, st);
     bool ans = validParentheses(st);
 
@@ -48,6 +48,10 @@ int main()
     cout<<"Valid Parentheses"<<endl;
     else
     cout<<"Invalid Parentheses"<<endl;
+
+
+    // Valid Parentheses: [{()}]
+    // Invalid Parentheses: {([}}]
 
     return 0;
 }
