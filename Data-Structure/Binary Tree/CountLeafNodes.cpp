@@ -43,19 +43,19 @@ Node *createTree(Node *root)
 }
 
 
-void inOrderTraversal(Node *root, int &count)
+void countLeafNodes(Node *root, int &count)
 {
     if (root == NULL)
     {
         return;
     }
     
-    inOrderTraversal(root->left, count);
+    countLeafNodes(root->left, count);
     if ((root->left == NULL) && (root->right == NULL))
     {
         count++;
     }
-    inOrderTraversal(root->right, count);
+    countLeafNodes(root->right, count);
 }
 
 
@@ -67,7 +67,7 @@ int main()
     
     cout<<endl;
     // PreOrder, InOrder, PostOrder any traversal can be applied
-    inOrderTraversal(root, count);
+    countLeafNodes(root, count);
     cout<<"Total leaf nodes are: "<<count<<endl;
 
     return 0;
