@@ -18,7 +18,7 @@ void deleteMiddle(stack<int> &stack, int count,int size){
     
     //Recursive call
     deleteMiddle(stack,count+1,size);
-    stack.push(num);
+    stack.push(val);
 }
 
 
