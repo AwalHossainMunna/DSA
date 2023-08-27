@@ -9,6 +9,7 @@ void deleteMiddle(stack<int> &stack, int count,int size){
 
     // base case
     if(count == size){
+        stack.pop();
         return;
     }
 
