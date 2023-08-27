@@ -33,7 +33,7 @@ int main()
         cin>>x;
         s.push(x);
     }
-
+ 
     size = s.size()/2;
 
     deleteMiddle(s,0,size);
