@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool BalancedParentheses(string expression)
+bool isBalancedParentheses(string expression)
 {
     stack<char> s;
     for (int i = 0; i <expression.length(); i++)
@@ -43,7 +43,7 @@ int main()
     string st;
     cout<<"Enter expression: "<<endl;
     getline(cin, st);
-    bool ans = BalancedParentheses(st);
+    bool ans = isBalancedParentheses(st);
 
     if(ans)
     cout<<"Balanced"<<endl;
