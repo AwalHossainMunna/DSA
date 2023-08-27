@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool validParentheses(string expression)
+bool BalancedParentheses(string expression)
 {
     stack<char> s;
     for (int i = 0; i <expression.length(); i++)
@@ -17,7 +17,7 @@ bool validParentheses(string expression)
         }
         // if ch is a closing bracket first check is stack empty? 
         // if not then check stack top element is equal to ch? if yes, then pop from stack.
-        else{
+        else if(ch == ')' || ch == '}' || ch == ']'){
             if (!s.empty()){
                 if (ch == ')' && s.top() == '(' || ch == '}' && s.top() == '{' || ch == ']' && s.top() == '['){
                     s.pop();
@@ -43,16 +43,16 @@ int main()
     string st;
     cout<<"Enter expression: "<<endl;
     getline(cin, st);
-    bool ans = validParentheses(st);
+    bool ans = BalancedParentheses(st);
 
     if(ans)
-    cout<<"Valid Parentheses"<<endl;
+    cout<<"Balanced"<<endl;
     else
-    cout<<"Invalid Parentheses"<<endl;
+    cout<<"Not Balanced"<<endl;
 
 
-    // Valid Parentheses: [{()}]
-    // Invalid Parentheses: {([}}]
+    // Balanced: [{()}]
+    // Not Balanced: {([}}]
 
     return 0;
 }
