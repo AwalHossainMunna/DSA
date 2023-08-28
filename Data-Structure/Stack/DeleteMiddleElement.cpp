@@ -13,7 +13,7 @@ void deleteMiddle(stack<int> &stack, int count,int size){
         return;
     }
 
-    //store recursive top element in num
+    //store recursive top element in val
     int val = stack.top();
     stack.pop();
     
