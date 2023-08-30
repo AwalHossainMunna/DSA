@@ -6,7 +6,7 @@ class treeNode
 {  
 public: 
     int data;
-    treeNode *leftChild;
+    treeNode *leftChild; 
     treeNode *rightChild;
 
     treeNode(int value)
