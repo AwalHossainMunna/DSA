@@ -3,7 +3,7 @@
 using namespace std; 
   
 class treeNode 
-{ 
+{  
 public: 
     int data;
     treeNode *leftChild;
