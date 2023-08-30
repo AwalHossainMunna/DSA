@@ -2,7 +2,7 @@
 /* Question: https://www.codingninjas.com/studio/problems/count-leaf-nodes_893055 */
  
 /* 
-  
+   
         1 
     3       5
   7  11   17  NULL
