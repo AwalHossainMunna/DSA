@@ -44,7 +44,7 @@ class Stack{
         }
     }
 
-    int topE(){                        // We can't name the function 'top' cz top is a pre-defined function, instead named this topE
+    int top(){                        // We can't name the function 'top' cz top is a pre-defined function, instead named this topE
         if(top >= 0 && top<size){
             return arr[top];
         }
@@ -73,7 +73,7 @@ int main()
     st.push(15);
     st.push(75);
 
-    cout<<st.topE()<<endl;
+    cout<<st.top()<<endl;
 
     return 0;
 }
