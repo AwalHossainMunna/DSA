@@ -5,3 +5,4 @@ node called a root node and has subtrees connected to the root.
 
 * Why we use tree?
 -> You can insert, delete, find node in  O(logN) time.
+-> Data are stored in order
