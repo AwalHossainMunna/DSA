@@ -3,9 +3,11 @@
 (where the data is stored) that are connected via links.The tree data structure stems from a single 
 node called a root node and has subtrees connected to the root.
 
+
 * Why we use tree?
 1) You can insert, delete, find node in  O(logN) time.
 2) Data are stored in order
+
 
 * Where is it used?
 1) File systems
@@ -15,3 +17,11 @@ node called a root node and has subtrees connected to the root.
 5) DTS (Machine Learning)
 6) Compression of file
 7) In Heaps, graphs tree is used
+
+
+* Properties of tree :
+1) size = Total number of nodes
+2) child =
+3) parent = 
+4) height = Max no of edges from the key node to the leaf node
+5) level = 
