@@ -4,5 +4,14 @@
 node called a root node and has subtrees connected to the root.
 
 * Why we use tree?
--> You can insert, delete, find node in  O(logN) time.
--> Data are stored in order
+1) You can insert, delete, find node in  O(logN) time.
+2) Data are stored in order
+
+* Where is it used?
+1) File systems
+2) Databases
+3) Algorithms/ Networking
+4) Maths
+5) DTS (Machine Learning)
+6) Compression of file
+7) In Heaps, graphs tree is used
