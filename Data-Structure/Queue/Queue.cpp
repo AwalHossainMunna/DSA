@@ -16,7 +16,7 @@ class Queue{
         this->front = -1; 
     }
 
-    // check empty function
+    // function to check whether queue empty or not
     bool isEmpty(){
         if(front == rear){
             return true;
@@ -54,7 +54,7 @@ class Queue{
         return front;
     }
 
-    //find front element function
+    //function to find front element 
     int front(){
         if(isEmpty()){
             cout<<"Queue is empty"<<endl;
