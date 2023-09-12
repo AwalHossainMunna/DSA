@@ -9,8 +9,8 @@ class Node{
 
     Node(int val)
     {
-        this.data = val;
-        this.next = NULL;
+        this->data = val;
+        this->next = NULL;
     }
 };
 
