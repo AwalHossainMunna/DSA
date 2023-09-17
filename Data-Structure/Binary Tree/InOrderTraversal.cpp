@@ -4,8 +4,8 @@
 
 class Solution {
     public:
-    vector<int> inorderTraversal(TreeNode* root) {
 
+    vector<int> inorderTraversal(TreeNode* root) {
       vector<int> ans;
       inorderTraversalHelper(ans, root);
       return ans;
@@ -22,6 +22,5 @@ class Solution {
     int data = temp->val;
     ans.push_back(data);
     inorderTraversalHelper(ans,temp->right);
-
    } 
 };
