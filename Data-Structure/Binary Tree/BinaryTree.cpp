@@ -1,3 +1,4 @@
+
 /*
 
         1
@@ -6,49 +7,47 @@
 
 */
 
-
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Node{
-    public:
-
+class Node
+{
+public:
     int data;
-    Node* left;
-    Node* right;
+    Node *left;
+    Node *right;
 
-    Node(int val){
+    Node(int val)
+    {
         this->data = val;
         this->left = NULL;
         this->right = NULL;
     }
 };
 
+Node *buildTree(Node *root)
+{
 
-Node* buildTree(Node* root){
-
-    cout<<"Enter the data: "<<endl;
     int data;
-    cin>>data;
+    cin >> data;
 
-    if(data == 0){
+    if (data == 0)
+    {
         return NULL;
     }
 
     root = new Node(data);
-    cout<<"Enter data left of: "<<data<<endl;
+    cout << "Enter data left of: " << data << endl;
     root->left = buildTree(root->left);
-    cout<<"Enter data right of: "<<data<<endl;
+    cout << "Enter data right of: " << data << endl;
     root->right = buildTree(root->right);
 
     return root;
 }
 
-
 void levelOrderTraversal(Node *root)
 {
-    queue<Node*> q;
+    queue<Node *> q;
     q.push(root);
     q.push(NULL);
 
@@ -83,15 +82,13 @@ void levelOrderTraversal(Node *root)
     }
 }
 
-
 int main()
 {
-    Node* root = NULL;
+    Node *root = NULL;
+    cout << "Enter the data: " << endl;
     root = buildTree(root);
     // 1 3 7 0 0 11 0 0 5 17 0 0 0
     levelOrderTraversal(root);
-    
+
     return 0;
 }
-
-
